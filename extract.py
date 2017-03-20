@@ -18,5 +18,9 @@ def extract(url):
             )
 
 if __name__ == '__main__':
-    a = extract('http://www.stindustries.net/docker/bad-dockerfile/')
+    if len(sys.argv) < 2 :
+        print("Usage : %s url" % (sys.argv[0]))
+        sys.exit(1)
+
+    a = extract(sys.argv[1])
     print(tostring(a['top']))

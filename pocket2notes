@@ -1,4 +1,4 @@
 #/bin/bash
 
-python3 -B /app/extractor/extract.py > /tmp/output.html
+python3 -B /app/extractor/extract.py $1 > /tmp/output.html
 python -B /app/html2text/html2text.py -b 0 /tmp/output.html > /tmp/output.markdown
